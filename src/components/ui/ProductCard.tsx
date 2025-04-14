@@ -36,13 +36,20 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+      <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
         <div className="relative aspect-square overflow-hidden">
+          {/* Mirror-like shimmering effect */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-mirror-gold/10 to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-500 z-10"></div>
+          
           <img 
             src={product.image} 
             alt={product.name} 
             className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
           />
+          
+          {/* Decorative geometric corner elements inspired by Iranian patterns */}
+          <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-mirror-gold/30"></div>
+          <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-mirror-gold/30"></div>
           
           {/* Overlay that appears on hover */}
           <div 
@@ -53,7 +60,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <Button 
               variant="default" 
               size="icon" 
-              className="rounded-full bg-white text-mirror-pink hover:bg-mirror-pink hover:text-white"
+              className="rounded-full bg-white text-mirror-gold hover:bg-mirror-gold hover:text-white"
               onClick={handleAddToCart}
             >
               <ShoppingCart className="h-5 w-5" />
@@ -76,7 +83,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <p className="text-gray-600 text-sm line-clamp-2 mb-2">{product.description}</p>
           <div className="flex justify-between items-center">
             <span className="font-bold text-gray-900">${product.price}</span>
-            <div className="h-2 w-2 rounded-full bg-mirror-pink/50 animate-pulse"></div>
+            <div className="h-2 w-2 rounded-full bg-mirror-gold animate-pulse"></div>
           </div>
         </div>
       </div>

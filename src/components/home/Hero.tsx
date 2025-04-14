@@ -6,10 +6,17 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <section className="relative pt-24 md:pt-32 pb-20 md:pb-28 overflow-hidden">
-      {/* Decorative elements inspired by Iranian patterns */}
+      {/* Enhanced geometric patterns inspired by Iranian mirror work */}
       <div className="absolute inset-0 -z-10 geometric-pattern opacity-20"></div>
-      <div className="absolute top-20 right-10 w-40 h-40 bg-mirror-gold/10 rounded-full blur-3xl"></div>
+      
+      {/* More pronounced golden elements */}
+      <div className="absolute top-20 right-10 w-60 h-60 bg-mirror-gold/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-60 h-60 bg-mirror-pink/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-40 left-1/4 w-40 h-40 bg-mirror-blue/10 rounded-full blur-3xl"></div>
+      
+      {/* Geometric mirror-inspired decorative elements */}
+      <div className="absolute top-1/4 left-10 w-20 h-20 border-2 border-mirror-gold/30 rotate-45 hidden md:block"></div>
+      <div className="absolute bottom-1/3 right-10 w-16 h-16 border-2 border-mirror-gold/30 rotate-12 hidden md:block"></div>
       
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -22,7 +29,7 @@ const Hero = () => {
               of Iranian craftsmanship while embracing a sustainable, circular economy approach.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild className="bg-mirror-pink hover:bg-mirror-pink/90 text-white">
+              <Button asChild className="bg-mirror-gold hover:bg-mirror-gold/90 text-white">
                 <Link to="/products">
                   Explore Collection
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -38,14 +45,15 @@ const Hero = () => {
           
           <div className="order-1 md:order-2">
             <div className="relative">
-              <div className="absolute -top-6 -right-6 w-full h-full bg-mirror-gold/20 rounded-lg"></div>
-              <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-mirror-blue/30 rounded-lg"></div>
+              <div className="absolute -top-6 -right-6 w-full h-full bg-mirror-gold/30 rounded-lg"></div>
+              <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-mirror-gold/50 rounded-lg"></div>
               <div className="relative overflow-hidden rounded-lg mirror-effect bg-white shadow-lg">
                 <img 
                   src="/lovable-uploads/111cf6bf-dcd9-471c-868a-f1d5f79fcfac.png" 
                   alt="Mirror work coffee table" 
                   className="w-full h-auto object-cover transform transition-transform hover:scale-105 duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-br from-mirror-gold/20 to-transparent opacity-50"></div>
               </div>
             </div>
           </div>

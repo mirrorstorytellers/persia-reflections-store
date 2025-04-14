@@ -6,6 +6,7 @@ import Hero from "@/components/home/Hero";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import StoryPreview from "@/components/home/StoryPreview";
 import CircularEconomy from "@/components/home/CircularEconomy";
+import AboutMotto from "@/components/home/AboutMotto";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <AboutMotto />
         <FeaturedProducts />
         <StoryPreview />
         <CircularEconomy />
