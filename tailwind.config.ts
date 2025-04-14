@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for Mirror Storytellers
+				mirror: {
+					pink: '#F77FBE',
+					gold: '#F4C430',
+					blue: '#1C39BB',
 				}
 			},
 			borderRadius: {
@@ -84,12 +91,49 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'shimmer': {
+					'0%': { 
+						backgroundPosition: '200% 0',
+						opacity: '0.5'
+					},
+					'100%': { 
+						backgroundPosition: '-200% 0',
+						opacity: '1'
+					}
+				},
+				'rotate-slow': {
+					'0%': {
+						transform: 'rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg)'
+					}
+				},
+				'geometric-float': {
+					'0%, 100%': {
+						transform: 'translateY(0) rotate(0deg)',
+					},
+					'50%': {
+						transform: 'translateY(-10px) rotate(2deg)',
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'shimmer': 'shimmer 5s infinite linear',
+				'rotate-slow': 'rotate-slow 20s linear infinite',
+				'geometric-float': 'geometric-float 8s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'mirror-pattern': 'linear-gradient(135deg, rgba(247, 127, 190, 0.1) 25%, transparent 25%, transparent 50%, rgba(247, 127, 190, 0.1) 50%, rgba(247, 127, 190, 0.1) 75%, transparent 75%, transparent)',
+				'geometric-gradient': 'linear-gradient(120deg, rgba(247, 127, 190, 0.05) 0%, rgba(244, 196, 48, 0.05) 50%, rgba(28, 57, 187, 0.05) 100%)',
+				'shimmer-effect': 'linear-gradient(-60deg, transparent, rgba(255, 255, 255, 0.3), transparent)',
+			},
+			backgroundSize: {
+				'mirror-pattern': '20px 20px',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
