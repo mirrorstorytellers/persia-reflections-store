@@ -14,8 +14,8 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <AboutMotto />
         <FeaturedProducts />
+        <AboutMotto />
         <StoryPreview />
         <CircularEconomy />
       </main>
