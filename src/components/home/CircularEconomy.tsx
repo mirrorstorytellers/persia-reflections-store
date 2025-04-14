@@ -18,7 +18,7 @@ const CircularEconomy = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="font-playfair text-3xl md:text-4xl font-bold">Circular Economy Approach</h2>
-          <p className="mt-4 text-lg text-gray-700">
+          <p className="mt-4 text-lg text-gray-700 italic">
             "Don't throw away the mirrors, their reflection has a story."
           </p>
           <p className="mt-2 text-gray-600">
@@ -71,3 +71,4 @@ const CircularEconomy = () => {
 };
 
 export default CircularEconomy;
+
